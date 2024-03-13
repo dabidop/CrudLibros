@@ -1,0 +1,50 @@
+﻿@model IEnumerable<CRUDDavidAlvarezEF.Models.Categoria>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center">Lista de categorías</h1>
+<br />
+<div style="display:flex;justify-content:space-between">
+    <p>
+        <a asp-action="Create" class="btn btn-outline-primary">Create New</a>
+    </p>
+    <form asp-controller="Categorias" asp-action="Index">
+        <p>
+            Buscar:<input type="text" name="buscar" class="form-text" />
+            <input type="submit" value="Buscar" class="btn btn-sm btn-dark" />
+        </p>
+    </form>
+</div>
+<br />
+<br />
+<div style="background-color:rgb(245, 244, 242);border-radius:15px">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    <a asp-action="Index" style="text-decoration:none;color:black" asp-route-filtro="@ViewData["FiltroNombres"]">
+                        @Html.DisplayNameFor(model => model.Nombre)
+                    </a>
+                
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                        <a asp-action="Edit" class="btn btn-outline-warning" asp-route-id="@item.CodigoCategoria">Edit</a>
+                    <a asp-action="Details" class="btn btn-outline-success" asp-route-id="@item.CodigoCategoria">Details</a>
+                        <a asp-action="Delete" class="btn btn-outline-danger" asp-route-id="@item.CodigoCategoria">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</div>

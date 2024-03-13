@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center" id="jaja">
+        
+        <h1>Bienvenidos a nuestra app para registrar Libros</h1>
+        <br />
+        <p class="p">Sumérgete en las letras que dan vida a mundos inexplorados, donde cada página es un portal hacia la imaginación y el conocimiento.</p>
+        <p class="p2">KING KONG LE GANA A GODZILLA<p/>
+        
+        <div class="imagenes">
+            <div class="container1">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Libroes" asp-action="Index"><img src="~/images/libros1.jpg" class="imagen1"/></a>
+                <h5>
+                    Entra para ver todos los libros con los que cuenta nuestra extensa biblioteca.
+                </h5>
+            </div>
+            <div class="container2">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Editoriales" asp-action="Index"><img src="~/images/editoriales.jpg" class="imagen1" /></a>
+                <h5>
+                    Entra para ver todos las editoriales y facilitar tu búsqueda.
+                </h5>
+            </div>
+            <div class="container3">
+                <div>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Index"><img src="~/images/categories.jpg" class="imagen1" /></a>
+                </div>
+                <div>
+                    <h5>Aquí podrás encontrar todas nuestras categorías de libros registrados.</h5>
+                </div>
+            </div>
+
+        </div>
+</div>
+    <style>
+        .container1 {
+            width: 200px;
+                        
+        }
+        .container2 {
+            width: 200px;
+                       
+        }
+        .container3 {
+            width: 200px;
+                       
+        }
+        .imagenes {           
+            display: flex;
+            padding: 15px;
+            justify-content: space-around;
+            flex-direction: row;
+            
+            
+        }
+        .imagen1 {
+            border-radius: 50%;
+            width: 180px;
+            
+        }
+        h1 {
+            font-family: SansSerif;
+        }
+        .p2 {
+            font-size: 3px;
+        }
+        .p {
+            font-size: 20px;
+        }
+        #jaja {
+        background-color: rgb(227, 226, 221);
+            border-radius: 30px;
+            padding: 35px;
+            margin-top: 15vh;
+            
+        }
+        
+    </style>
+

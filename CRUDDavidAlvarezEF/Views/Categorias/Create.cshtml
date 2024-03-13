@@ -1,0 +1,43 @@
+﻿@model CRUDDavidAlvarezEF.Models.Categoria
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="text-center">Crear</h1>
+<br/>
+<h4 class="text-center">Categoria</h4>
+<hr />
+<div class="row text-center" style="width:500px;margin-left:31%">
+    <div class="text-center">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CodigoCategoria" class="control-label"></label>
+                <input asp-for="CodigoCategoria" class="form-control" />
+                <span asp-validation-for="CodigoCategoria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-outline-primary" />
+            </div>
+        </form>
+    </div>
+    <br />
+
+    <div>
+        <br />
+        <a asp-action="Index" class="btn btn-outline-warning">Back to List</a>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
